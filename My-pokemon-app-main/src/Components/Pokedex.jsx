@@ -11,7 +11,7 @@ import {
   TextField,
 } from "@material-ui/core";
 import { fade, makeStyles } from "@material-ui/core/styles";
-import { toFirstCharUppercase } from "./constants";
+import { toFirstCharUppercase } from "../constants";
 import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
 

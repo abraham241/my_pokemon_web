@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from "react";
 import { Typography, Link, CircularProgress, Button } from "@material-ui/core";
-import { toFirstCharUppercase } from "./constants";
+import { toFirstCharUppercase } from "../constants";
 import axios from "axios";
 
 const Pokemon = (props) => {
@@ -24,15 +24,13 @@ const Pokemon = (props) => {
 
   const generatePokemonJSX = (pokemon) => {
     const { name, id, species, height, weight, types, sprites } = pokemon;
-    const fullImageUrl = `https://pokeres.bastionbot.org/images/pokemon/${id}.png`;
     const { front_default } = sprites;
     return (
       <>
         <Typography variant="h1">
           {`${id}.`} {toFirstCharUppercase(name)}
-          <img src={front_default} />
         </Typography>
-        <img style={{ width: "300px", height: "300px" }} src={fullImageUrl} />
+        <img style={{ width: "300px", height: "300px" }} src={front_default} />
         <Typography variant="h3">Pokemon Info</Typography>
         <Typography>
           {"Species: "}
